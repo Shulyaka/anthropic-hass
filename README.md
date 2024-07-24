@@ -13,8 +13,6 @@ This integration does not integrate with [sentence triggers](https://www.home-as
 
 This integration requires an API key to use, [which you can generate here.](https://console.anthropic.com/settings/keys). This is a paid service, we advise you to monitor your costs in the [Anthropic portal](https://console.anthropic.com/settings/cost) closely.
 
-{% include integrations/config_flow.md %}
-
 ## Generate an API Key
 
 The Anthropic API key is used to authenticate requests to the Anthropic API. To generate an API key, take the following steps:
@@ -24,23 +22,17 @@ The Anthropic API key is used to authenticate requests to the Anthropic API. To 
 - Visit the [API Keys page](https://console.anthropic.com/settings/keys) to retrieve the API key you'll use to configure the integration.
 
 ## Configuration
-Instructions:
-  description: Instructions for the AI on how it should respond to your requests. It is written using [Home Assistant Templating](https://www.home-assistant.io/docs/configuration/templating/).
-
-Control Home Assistant:
-  description: If the model is allowed to interact with Home Assistant. It can only control or provide information about entities that are [exposed](https://www.home-assistant.io/voice_control/voice_remote_expose_devices/) to it.
-
-Recommended settings:
-  description: If enabled, the recommended model and settings are chosen.
+|parameter|description|
+|---------|-----------|
+|Instructions | Instructions for the AI on how it should respond to your requests. It is written using [Home Assistant Templating](https://www.home-assistant.io/docs/configuration/templating/).|
+|Control Home Assistant | If the model is allowed to interact with Home Assistant. It can only control or provide information about entities that are [exposed](https://www.home-assistant.io/voice_control/voice_remote_expose_devices/) to it.|
+|Recommended settings | If enabled, the recommended model and settings are chosen. |
 
 If you choose not to use the recommended settings, you can configure the following options:
 
-Model:
-  description: The model that will complete your prompt. See [models](https://docs.anthropic.com/en/docs/about-claude/models#model-names) for additional details and options.
-
-Maximum Tokens to Return in Response:
-  description: The maximum number of tokens to generate before stopping. Note that our models may stop _before_ reaching this maximum. This parameter only specifies the absolute maximum number of tokens to generate. Different models have different maximum values for this parameter. See [models](https://docs.anthropic.com/en/docs/models-overview) for details.
-
-Temperature:
-  description: Amount of randomness injected into the response. Use `temperature` closer to `0.0` for analytical / multiple choice, and closer to `1.0` for creative and generative tasks. Note that even with `temperature` of `0.0`, the results will not be fully deterministic.
+|parameter|description|
+|---------|-----------|
+| Model | The model that will complete your prompt. See [models](https://docs.anthropic.com/en/docs/about-claude/models#model-names) for additional details and options. |
+| Maximum Tokens to Return in Response | The maximum number of tokens to generate before stopping. Note that our models may stop _before_ reaching this maximum. This parameter only specifies the absolute maximum number of tokens to generate. Different models have different maximum values for this parameter. See [models](https://docs.anthropic.com/en/docs/models-overview) for details. |
+| Temperature | Amount of randomness injected into the response. Use `temperature` closer to `0.0` for analytical / multiple choice, and closer to `1.0` for creative and generative tasks. Note that even with `temperature` of `0.0`, the results will not be fully deterministic. |
 
