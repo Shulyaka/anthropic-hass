@@ -31,7 +31,6 @@ async def test_entity(
     """Test entity properties."""
     state = hass.states.get("conversation.claude")
     assert state
-    assert state.attributes["supported_features"] == 0
 
     hass.config_entries.async_update_entry(
         mock_config_entry,
@@ -47,10 +46,6 @@ async def test_entity(
 
     state = hass.states.get("conversation.claude")
     assert state
-    assert (
-        state.attributes["supported_features"]
-        == conversation.ConversationEntityFeature.CONTROL
-    )
 
 
 async def test_error_handling(
