@@ -1,1 +1,1 @@
-"""XBee Humidifier Custom Component."""
+"""Anthropic Custom Component."""
