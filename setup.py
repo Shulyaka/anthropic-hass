@@ -18,7 +18,8 @@ def long_description():
 setup(
     name="anthropic_hass",
     version=VERSION,
-    description="Home Assistant custom component for Anthropic Claude conversation agent",
+    description="Home Assistant custom component "
+    "for Anthropic Claude conversation agent",
     long_description=long_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/Shulyaka/anthropic-hass",

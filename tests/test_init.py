@@ -26,14 +26,16 @@ def test_test(hass):
         (APITimeoutError(request=None), "Request timed out"),
         (
             BadRequestError(
-                message="Your credit balance is too low to access the Claude API. Please go to Plans & Billing to upgrade or purchase credits.",
+                message="Your credit balance is too low to access the Claude API. "
+                "Please go to Plans & Billing to upgrade or purchase credits.",
                 response=Response(
                     status_code=400,
                     request=Request(method="POST", url=URL()),
                 ),
                 body={"type": "error", "error": {"type": "invalid_request_error"}},
             ),
-            "anthropic integration not ready yet: Your credit balance is too low to access the Claude API",
+            "anthropic integration not ready yet: "
+            "Your credit balance is too low to access the Claude API",
         ),
         (
             AuthenticationError(

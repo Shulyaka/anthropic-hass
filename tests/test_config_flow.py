@@ -104,7 +104,8 @@ async def test_options(
         (APITimeoutError(request=None), "timeout_connect"),
         (
             BadRequestError(
-                message="Your credit balance is too low to access the Claude API. Please go to Plans & Billing to upgrade or purchase credits.",
+                message="Your credit balance is too low to access the Claude API. "
+                "Please go to Plans & Billing to upgrade or purchase credits.",
                 response=Response(
                     status_code=400,
                     request=Request(method="POST", url=URL()),

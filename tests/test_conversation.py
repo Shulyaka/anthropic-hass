@@ -363,7 +363,8 @@ async def test_function_exception(
         "role": "user",
         "content": [
             {
-                "content": '{"error": "HomeAssistantError", "error_text": "Test tool exception"}',
+                "content": '{"error": "HomeAssistantError", '
+                '"error_text": "Test tool exception"}',
                 "tool_use_id": "toolu_0123456789AbCdEfGhIjKlM",
                 "type": "tool_result",
             }
