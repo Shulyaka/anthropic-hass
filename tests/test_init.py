@@ -2,18 +2,16 @@
 
 from unittest.mock import AsyncMock, patch
 
+import pytest
 from anthropic import (
     APIConnectionError,
     APITimeoutError,
     AuthenticationError,
     BadRequestError,
 )
-from httpx import URL, Request, Response
-import pytest
-
 from homeassistant.core import HomeAssistant
 from homeassistant.setup import async_setup_component
-
+from httpx import URL, Request, Response
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 

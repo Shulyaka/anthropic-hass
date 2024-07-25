@@ -2,13 +2,10 @@
 
 from unittest.mock import AsyncMock, Mock, patch
 
+import voluptuous as vol
 from anthropic import RateLimitError
 from anthropic.types import Message, TextBlock, ToolUseBlock, Usage
 from freezegun import freeze_time
-from httpx import URL, Request, Response
-from syrupy.assertion import SnapshotAssertion
-import voluptuous as vol
-
 from homeassistant.components import conversation
 from homeassistant.components.conversation import trace
 from homeassistant.const import CONF_LLM_HASS_API
@@ -17,8 +14,9 @@ from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers import intent, llm
 from homeassistant.setup import async_setup_component
 from homeassistant.util import ulid
-
+from httpx import URL, Request, Response
 from pytest_homeassistant_custom_component.common import MockConfigEntry
+from syrupy.assertion import SnapshotAssertion
 
 
 def test_test(hass):

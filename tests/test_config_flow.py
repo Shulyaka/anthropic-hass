@@ -2,6 +2,7 @@
 
 from unittest.mock import AsyncMock, patch
 
+import pytest
 from anthropic import (
     APIConnectionError,
     APIResponseValidationError,
@@ -10,10 +11,13 @@ from anthropic import (
     BadRequestError,
     InternalServerError,
 )
-from httpx import URL, Request, Response
-import pytest
-
 from homeassistant import config_entries
+from homeassistant.const import CONF_LLM_HASS_API
+from homeassistant.core import HomeAssistant
+from homeassistant.data_entry_flow import FlowResultType
+from httpx import URL, Request, Response
+from pytest_homeassistant_custom_component.common import MockConfigEntry
+
 from custom_components.anthropic.config_flow import RECOMMENDED_OPTIONS
 from custom_components.anthropic.const import (
     CONF_CHAT_MODEL,
@@ -25,11 +29,6 @@ from custom_components.anthropic.const import (
     RECOMMENDED_CHAT_MODEL,
     RECOMMENDED_MAX_TOKENS,
 )
-from homeassistant.const import CONF_LLM_HASS_API
-from homeassistant.core import HomeAssistant
-from homeassistant.data_entry_flow import FlowResultType
-
-from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 
 def test_test(hass):

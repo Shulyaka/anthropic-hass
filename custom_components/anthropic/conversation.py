@@ -1,10 +1,11 @@
 """Conversation support for Anthropic."""
 
-from collections.abc import Callable
 import json
+from collections.abc import Callable
 from typing import Any, Literal, cast
 
 import anthropic
+import voluptuous as vol
 from anthropic._types import NOT_GIVEN
 from anthropic.types import (
     Message,
@@ -16,9 +17,6 @@ from anthropic.types import (
     ToolUseBlock,
     ToolUseBlockParam,
 )
-import voluptuous as vol
-from voluptuous_openapi import convert
-
 from homeassistant.components import assist_pipeline, conversation
 from homeassistant.components.conversation import trace
 from homeassistant.const import CONF_LLM_HASS_API, MATCH_ALL
@@ -27,6 +25,7 @@ from homeassistant.exceptions import HomeAssistantError, TemplateError
 from homeassistant.helpers import device_registry as dr, intent, llm, template
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.util import ulid
+from voluptuous_openapi import convert
 
 from . import AnthropicConfigEntry
 from .const import (

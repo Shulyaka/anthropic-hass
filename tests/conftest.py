@@ -3,14 +3,11 @@
 from unittest.mock import AsyncMock, patch
 
 import pytest
-
 from homeassistant.const import CONF_LLM_HASS_API
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import llm
 from homeassistant.setup import async_setup_component
-
 from pytest_homeassistant_custom_component.common import MockConfigEntry
-
 
 pytest_plugins = "pytest_homeassistant_custom_component"
 
