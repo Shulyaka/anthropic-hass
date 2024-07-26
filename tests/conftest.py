@@ -9,7 +9,7 @@ from homeassistant.helpers import llm
 from homeassistant.setup import async_setup_component
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
-pytest_plugins = "pytest_homeassistant_custom_component"
+pytest_plugins = "pytest_homeassistant_custom_component.plugins"
 
 
 # This fixture enables loading custom integrations in all tests.
