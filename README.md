@@ -1,5 +1,6 @@
 # anthropic-hass
 ![CI](https://github.com/Shulyaka/anthropic-hass/actions/workflows/anthropic-hass.yml/badge.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Shulyaka/anthropic-hass/badge.svg?branch=master)](https://coveralls.io/github/Shulyaka/anthropic-hass?branch=master)
 
 Home Assistant custom component for Anthropic Claude conversation agent
 
