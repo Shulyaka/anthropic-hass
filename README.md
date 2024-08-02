@@ -2,7 +2,7 @@
 ![CI](https://github.com/Shulyaka/anthropic-hass/actions/workflows/anthropic-hass.yml/badge.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/Shulyaka/anthropic-hass/badge.svg?branch=master)](https://coveralls.io/github/Shulyaka/anthropic-hass?branch=master)
 
-# Important note: This integration has been accepted into core. This repository will be archived when it is released.
+# Important note: This integration has been accepted into core. This repository will be archived when Home Assistant 2024.9.0 is released.
 
 ## Home Assistant custom component for Anthropic Claude conversation agent
 
