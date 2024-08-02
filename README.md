@@ -2,7 +2,9 @@
 ![CI](https://github.com/Shulyaka/anthropic-hass/actions/workflows/anthropic-hass.yml/badge.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/Shulyaka/anthropic-hass/badge.svg?branch=master)](https://coveralls.io/github/Shulyaka/anthropic-hass?branch=master)
 
-Home Assistant custom component for Anthropic Claude conversation agent
+# Important note: This integration has been accepted into core. This repository will be archived when it is released.
+
+## Home Assistant custom component for Anthropic Claude conversation agent
 
 Legal notice: This integration uses the official API. Please note that Anthropic API is intended for B2B and not for individual use, [more info here](https://support.anthropic.com/en/articles/8987200-can-i-use-the-claude-api-for-individual-use). Therefore this integration is intended for commercial uses.
 
